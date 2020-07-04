@@ -131,7 +131,8 @@ window.addEventListener('DOMContentLoaded', () => {
     };
     togglePopUp();
     const scrooToService = () => {
-        const buttonScrool = document.querySelector('[href="#"]');
+        event.preventDefault();
+        const buttonScrool = document.querySelector('[href="#service-block"]');
         let count = 0;
         const scroolinterval = () => {
             const scroolPoint = document.documentElement.scrollTop;
@@ -140,7 +141,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 const animScrool = requestAnimationFrame(animScrooToService);
                 if (count < 918) {
                     document.documentElement.scrollTop = `${count}`;
-                    count += 54;
+                    count += 27;
                 } else {
                     cancelAnimationFrame(animScrool);
                     count = 0;
